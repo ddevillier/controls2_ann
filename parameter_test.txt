@@ -1,0 +1,93 @@
+THIS FILE CONTAINS THE INITIAL RESULTS OF HYPERPARAMETER OPTIMIZATION IN THE NET
+
+##single layer networks
+
+RandomizedSearchCV took 8974.51 seconds for 15 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.824 (std: 0.000)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (50,), 'alpha': 0.0001}
+
+Model with rank: 2
+Mean validation score: 0.822 (std: 0.000)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.01, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (100,), 'alpha': 0.0001}
+
+Model with rank: 3
+Mean validation score: 0.822 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.01, 'learning_rate': 'constant', 'hidden_layer_sizes': (50,), 'alpha': 0.0001}
+
+---
+##dual layer network
+
+RandomizedSearchCV took 15593.22 seconds for 15 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.825 (std: 0.000)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (25, 20), 'alpha': 0.0001}
+
+Model with rank: 2
+Mean validation score: 0.824 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (10, 52), 'alpha': 0.0001}
+
+Model with rank: 3
+Mean validation score: 0.823 (std: 0.000)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (25, 20), 'alpha': 0.05}
+---
+##three layer network
+
+RandomizedSearchCV took 2001.06 seconds for 15 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.822 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (10, 10, 10), 'alpha': 0.0001}
+
+Model with rank: 2
+Mean validation score: 0.820 (std: 0.002)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (10, 10, 10), 'alpha': 0.05}
+
+Model with rank: 3
+Mean validation score: 0.817 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (7, 7, 7), 'alpha': 0.0001}
+---
+#three layer network
+
+RandomizedSearchCV took 2818.28 seconds for 15 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.825 (std: 0.000)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (15, 15, 15), 'alpha': 0.0001}
+
+Model with rank: 2
+Mean validation score: 0.825 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (20, 20, 20), 'alpha': 0.0001}
+
+Model with rank: 3
+Mean validation score: 0.824 (std: 0.001)
+Parameters: {'solver': 'adam', 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (15, 15, 15), 'alpha': 0.01}
+---
+With SGD/Adam and momentum plus various architectures
+
+RandomizedSearchCV took 4797.03 seconds for 15 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.822 (std: 0.001)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.1, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (20, 20), 'alpha': 0.01}
+
+Model with rank: 2
+Mean validation score: 0.821 (std: 0.000)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.5, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (45,), 'alpha': 0.01}
+
+Model with rank: 3
+Mean validation score: 0.820 (std: 0.000)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.5, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (30,), 'alpha': 0.0001}
+---
+With SGD/Adam and momentum plus additional options and larger population
+
+RandomizedSearchCV took 10083.55 seconds for 30 candidate parameter settings.
+Model with rank: 1
+Mean validation score: 0.825 (std: 0.000)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.9, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (15, 15, 15), 'alpha': 0.0001}
+
+Model with rank: 2
+Mean validation score: 0.824 (std: 0.000)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.9, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (20, 20), 'alpha': 0.01}
+
+Model with rank: 3
+Mean validation score: 0.822 (std: 0.000)
+Parameters: {'solver': 'sgd', 'nesterovs_momentum': True, 'momentum': 0.5, 'learning_rate_init': 0.001, 'learning_rate': 'adaptive', 'hidden_layer_sizes': (20, 20), 'alpha': 0.01}
+
